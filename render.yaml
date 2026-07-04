@@ -4,7 +4,7 @@ services:
     runtime: docker
     dockerfilePath: ./Dockerfile
     healthCheckPath: /health/
-    preDeployCommand: "python manage.py migrate"
+    preDeployCommand: python manage.py migrate
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: config.settings.production
